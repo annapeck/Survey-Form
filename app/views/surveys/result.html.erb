@@ -1,0 +1,17 @@
+<h2>Results</h2>
+  <% if flash[:count]%>
+  <div id='greenbox'>
+    
+    <p>Thanks for submitting this form! You have submitted this form <%= flash[:count] %> times now.</p>
+  </div>
+  <% end %>
+<div id='results_display'>
+	<h3>Submitted Information</h3>
+
+  Name: <%= @user['name'] %><br>
+  Location: <%= @user['location'] %><br>
+  Language: <%= @user['language'] %><br>
+  Comments: <%= @user['comment'] %><br><br>
+
+  <a href="/surveys/new"><input type='submit' value='Go Back'></a>
+</div>
